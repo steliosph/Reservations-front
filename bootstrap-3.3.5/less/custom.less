@@ -14,51 +14,159 @@
 }
 
 
-.progress-radial {
-  float: left;
-  margin-right: 20px;
+.set-size {
+  font-size: 5em;
+}
+.pie-wrapper {
+  @size: 1em;
+
+  .size(@size, @size);
+  display: inline-block;
   position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid #2f3439; // remove gradient color
-  background-color: #fffde8; // default 100%
 
+  .pie {
+    .size(100%, 100%);
+    clip: rect(0, @size, @size, @size / 2);
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    .half-circle {
+      .size(100%, 100%);
+      border: @size / 10 solid @brand-primary;
+      border-radius: 50%;
+      clip: rect(0, @size / 2, @size, 0);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .label {
+    @font-size: @size / 4;
+    @font-size-redo: @size * 4;
+
+    background: none;
+    border-radius: 50%;
+    bottom: @font-size-redo / 10;
+    color: @brand-primary;
+    cursor: default;
+    display: block;
+    font-size: @font-size;
+    left: @font-size-redo / 10;
+    line-height: @font-size-redo * .65;
+    position: absolute;
+    right: @font-size-redo / 10;
+    text-align: center;
+    // top: @font-size-redo / 10;
+
+    .smaller {
+      color: #3498db;
+      font-size: .45em;
+      padding-bottom: 20px;
+      vertical-align: super;
+    }
+  }
+
+  .shadow {
+    .size(100%, 100%);
+    border: @size / 10 solid #bdc3c7;
+    border-radius: 50%;
+  }
+
+  &.progress-0 { .draw-progress(0); }
+  &.progress-1 { .draw-progress(2); }
+  &.progress-2 { .draw-progress(4); }
+  &.progress-3 { .draw-progress(6); }
+  &.progress-4 { .draw-progress(8); }
+  &.progress-5 { .draw-progress(10); }
+  &.progress-6 { .draw-progress(12); }
+  &.progress-7 { .draw-progress(14); }
+  &.progress-8 { .draw-progress(16); }
+  &.progress-9 { .draw-progress(18); }
+  &.progress-10 { .draw-progress(20); }
+  &.progress-11 { .draw-progress(22); }
+  &.progress-12 { .draw-progress(24); }
+  &.progress-13 { .draw-progress(26); }
+  &.progress-14 { .draw-progress(28); }
+  &.progress-15 { .draw-progress(30); }
+  &.progress-16 { .draw-progress(32); }
+  &.progress-17 { .draw-progress(34); }
+  &.progress-18 { .draw-progress(36); }
+  &.progress-19 { .draw-progress(38); }
+  &.progress-20 { .draw-progress(40); }
+  &.progress-21 { .draw-progress(42); }
+  &.progress-22 { .draw-progress(44); }
+  &.progress-23 { .draw-progress(46); }
+  &.progress-24 { .draw-progress(48); }
+  &.progress-25 { .draw-progress(50); }
+  &.progress-26 { .draw-progress(52); }
+  &.progress-27 { .draw-progress(54); }
+  &.progress-28 { .draw-progress(56); }
+  &.progress-29 { .draw-progress(58); }
+  &.progress-30 { .draw-progress(60); }
+  &.progress-31 { .draw-progress(62); }
+  &.progress-32 { .draw-progress(64); }
+  &.progress-33 { .draw-progress(66); }
+  &.progress-34 { .draw-progress(68); }
+  &.progress-35 { .draw-progress(70); }
+  &.progress-36 { .draw-progress(72); }
+  &.progress-37 { .draw-progress(74); }
+  &.progress-38 { .draw-progress(76); }
+  &.progress-39 { .draw-progress(78); }
+  &.progress-40 { .draw-progress(80); }
+  &.progress-41 { .draw-progress(82); }
+  &.progress-42 { .draw-progress(84); }
+  &.progress-43 { .draw-progress(86); }
+  &.progress-44 { .draw-progress(88); }
+  &.progress-45 { .draw-progress(90); }
+  &.progress-46 { .draw-progress(92); }
+  &.progress-47 { .draw-progress(94); }
+  &.progress-48 { .draw-progress(96); }
+  &.progress-49 { .draw-progress(98); }
+  &.progress-50 { .draw-progress(100); }
 }
 
-.progress-radial .overlay {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: #2f3439;
-  border-radius: 50%;
-  margin-left: 8px;
-  margin-top: 8px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 16px;
+.draw-progress(@progress) when (@progress <= 50) {
+  .pie {
+    .right-side {
+      display: none;
+    }
+  }
 }
 
-.progress-0 {
-  background-image: linear-gradient(90deg, #2f3439 50%, transparent 50%, transparent), linear-gradient(90deg, #fffde8 50%, #2f3439 50%, #2f3439);
+.draw-progress(@progress) when (@progress > 50) {
+  .pie {
+    clip: rect(auto, auto, auto, auto);
+    .right-side {
+      .transform(rotate(180deg));
+    }
+  }
 }
 
-.progress-1 {
-  background-image: linear-gradient(90deg, #2f3439 50%, transparent 50%, transparent), linear-gradient(162deg, #fffde8 50%, #2f3439 50%, #2f3439);
+.draw-progress(@progress) {
+  .pie {
+    .half-circle {
+      border-color: @brand-primary;
+    }
+
+    .left-side {
+      @rotate: @progress * 3.6;
+      .transform(rotate(~'@{rotate}deg'));
+    }
+  }
 }
 
-.progress-2 {
-  background-image: linear-gradient(90deg, #2f3439 50%, transparent 50%, transparent), linear-gradient(234deg, #fffde8 50%, #2f3439 50%, #2f3439);
+// --
+.size(@w, @h) {
+  height: @h;
+  width: @w;
 }
 
-.progress-3 {
-  background-image: linear-gradient(-90deg, #fffde8 50%, transparent 50%, transparent), linear-gradient(270deg, #fffde8 50%, #2f3439 50%, #2f3439);
-}
-
-.progress-4 {
-  background-image: linear-gradient(-18deg, #fffde8 50%, transparent 50%, transparent), linear-gradient(270deg, #fffde8 50%, #2f3439 50%, #2f3439);
-}
-
-.progress-5 {
-  background-image: linear-gradient(54deg, #fffde8 50%, transparent 50%, transparent), linear-gradient(270deg, #fffde8 50%, #2f3439 50%, #2f3439);
+.transform(@value) {
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -ms-transform: @value;
+  -o-transform: @value;
+  transform: @value;
 }

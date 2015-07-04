@@ -1,3 +1,4 @@
+// main: bootstrap.less
 //
 // Grid system
 // --------------------------------------------------
@@ -8,6 +9,10 @@
 // Set the container width, and override it for fixed navbars in media queries.
 
 .container {
+
+  &.main {
+    margin-top: 80px;
+  }
   .container-fixed();
 
   @media (min-width: @screen-sm-min) {

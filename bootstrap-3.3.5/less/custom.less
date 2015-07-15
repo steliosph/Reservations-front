@@ -1,8 +1,22 @@
 // main: bootstrap.less
 
+
+.page-header-small {
+    padding-bottom: 4px;
+    margin: 20px 0;
+    border-bottom: 1px solid @brand-primary;
+}
+
+.bg {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.bg.alert-dismissable .close {
+    right: 10px;
+}
+
 // Municipality Selection navbar
-
-
 .municipality-selection {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -37,7 +51,6 @@
 }
 
 // Rating score
-
 .set-size {
   font-size: 5em;
 }
@@ -197,8 +210,11 @@
 
 
 // GOOGLE MAP CANVAS
-
-#map-canvas {width: 1360px;height: 400px;}
+#map-canvas {
+    width: 100%;
+    height: 400px;
+    margin-bottom:15px;
+}
 
 .restaurant-caption {
   position: absolute;

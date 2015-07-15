@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Cyprus Online Rervation - Favourites</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top opaque">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Reservation</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                  <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      Welcome Stelios
+                      <span class="caret"></span>
+                  </a>
+                  <ul role="menu" class="dropdown-menu">
+                      <li><a href="/Reservations/upcomingreservations">Reservations</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/Reservations/myprofile">My Profile</a></li>
+                      <li><a href="/Reservations/favourites">Favourites</a></li>
+                      <li><a href="/Reservations/reviews">Reviews </a></li>
+                      <li class="divider"></li>
+                      <li><a href="/Reservations/upcomingreservations.external:logout">Logout</a></li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Fixed navbar
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-/.nav-collapse ->
+      </div>
+    </nav> -->
+
+    <!-- Begin page content -->
+    <div class="container main">
+        <div class="page-header-small"><h3>General Restaurant Information</h3></div>
+        <form class="">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="alert-dismissable bg bg-success">
+                        <button class="close" type="button" data-dismiss="alert"></button>
+                        <h5>Your Restaurant Information have been updated</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="defaultLanguage">Restaurant Name</label>
+                            <input placeholder="Restaurant Name *" value="Artisans Burgerbar" id="name" class="form-control" name="name" type="text"></input>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <label for="website">Restaurant Website</label>
+        					<input placeholder="Restaurant Website URL" id="website" class="form-control form-control" name="website" type="text"></input>
+        				</div>
+                    </div>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                    <label for="description">Restaurant Description</label>
+    				<textarea rows="7" placeholder="Restaurant Description" type="text" id="textarea" class="form-control" name="textarea">It has been a long time passion of ours to perfect 'the burger'. Our artisan burgers are always ground in - house and are handmade daily, using only the finest quality ingredients!
+    We start each day by handpicking the freshest produce to carefully craft and twist them into our unique selection of delicious dishes!</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <label for="chef">Chef</label>
+                            <input placeholder="The name of the Chef of your restaurant" id="textfield" class="form-control form-control" name="textfield" type="text"></input>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <label for="souschef">Sous chef</label>
+                            <input placeholder="The name of the Sous Chef of your restaurant" id="textfield_0" class="form-control form-control" name="textfield_0" type="text"></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-7 col-lg-8">
+                    <label for="parkingDetails">Restaurant Parking Details</label>
+					<textarea rows="5" placeholder="Restaurant Parking Details" type="text" id="textarea_0" class="form-control form-control" name="textarea_0"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label for="dressCode">Dress Code</label>
+    				<select class="form-control" id="select_0" name="select_0"><option value="31">Street wear</option><option selected="selected" value="32">Casual</option><option value="33">Business Casual</option><option value="34">Smart Casual</option><option value="35">Business/ Informal</option><option value="36">Black Tie/ Semi-formal</option></select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label for="priceRange">Price Range</label>
+    				<select class="form-control form-control" id="select_1" name="select_1"><option selected="selected" value="10">Inexpensive: Entrees Under €8</option><option value="11">Inexpensive to Moderate: Some entrees under €8, Others €8-€15</option><option value="12">Moderate: Entrees €8-€15</option><option value="13">Moderate to Expensive: Some entrees €8-€15, Others €15-€25</option><option value="14">Expensive: Entrees €15-€25</option><option value="15">Expensive to Very Expensive: Some entrees €15-€25, Others €25 and up</option><option value="16">Very Expensive: Entrees €25 and up</option></select>
+                </div>
+			</div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label for="cuisine">Cuisine</label>
+                    <select class="form-control form-control" id="select_2" name="select_2"><option value="96">African</option><option value="97">American</option><option value="98">Argentinian</option><option value="99">Belgian</option><option value="100">Brazilian</option><option selected="selected" value="101">Burgers</option><option value="102">Cajun and Creole</option><option value="103">Cambodian</option><option value="104">Caribbean</option><option value="105">Chinese</option><option value="106">Crepes</option><option value="107">Cuban</option><option value="108">Cypriot Tavern</option><option value="109">Deli</option><option value="110">Dessert</option><option value="111">Filipino</option><option value="112">French</option><option value="113">German</option><option value="114">Greek</option><option value="115">Haitian</option><option value="116">Indian</option><option value="117">Indonesian</option><option value="118">Irish</option><option value="119">Italian</option><option value="120">Jamaican</option><option value="121">Japanese</option><option value="122">Korean</option><option value="123">Kosher</option><option value="124">Latin-American</option><option value="125">Lebanese</option><option value="126">Malaysian</option><option value="127">Mediterranean</option><option value="128">Mexican</option><option value="129">Middle-Eastern</option><option value="130">Moroccan</option><option value="131">Noodle-Shops</option><option value="132">Pakistani</option><option value="133">Italian</option><option value="134">Polish</option><option value="135">Portuguese</option><option value="136">Russian</option><option value="137">Seafood</option><option value="138">Spanish</option><option value="139">Steakhouse</option><option value="140">Sushi</option><option value="141">Taiwanese</option><option value="142">Thai</option><option value="143">Turkish</option></select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label for="dinningStyle">Dinning Style</label>
+                    <select class="form-control form-control" id="select_3" name="select_3"><option value="17">Fast food</option><option value="18">Fast casual</option><option selected="selected" value="19">Casual dining</option><option value="20">Family style</option><option value="21">Fine dining</option><option value="22">Brasserie and bistro</option><option value="23">Buffet and smörgåsbord</option><option value="24">Café</option><option value="25">Coffeehouse</option><option value="26">Destination restaurant</option><option value="27">Tabletop cooking</option><option value="28">Mongolian barbecue</option><option value="29">Pub</option><option value="30">Teppanyaki-style</option></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label for="contactPhone">Contact</label>
+                    <input pattern="+\d{3} ?\d{2} ?\d{6}" placeholder="Format :  +357 22 000000" id="contactPhone" class="form-control form-control" name="contactPhone" type="text"></input>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6">
+                    <label for="managerPhone">Manager</label>
+                    <input pattern="+\d{3} ?\d{2} ?\d{6}" placeholder="Format :  +357 22 000000" id="managerPhone" class="form-control form-control" name="managerPhone" type="text"></input>
+                </div>
+            </div>
+
+             <button type="submit" class="btn btn-primary btn-reserve">Update Profile</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+      <section class="container">
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <p><strong>Cities</strong></p>
+            <p><a href="#">Nicosia</a></p>
+            <p><a href="#">Limmasol</a></p>
+            <p><a href="#">Larnaca</a></p>
+            <p><a href="#">Paphos</a></p>
+            <p><a href="#">Famagusta</a></p>
+          </div>
+          <div class="col-xs-4">
+            <p><a href="/reservations/index.external:help">Help</a></p>
+            <p><a href="/reservations/index.external:terms">Terms of Use</a></p>
+            <!--<p>BACK TO <a href="#top">TOP</a></p>-->
+          </div>
+          <div class="col-xs-4 pull-right">
+            <p><a href="/reservations/index.external.setlocaltoenglish">English</a> |
+              <a href="/reservations/index.external.setlocaltogreek">Greek</a> |
+              <a href="/reservations/index.external.setlocaltorussian">Russian</a></p>
+            <p>©2014. version 0.28.01. All Rights Reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    -->
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!--<link rel="icon" href="../../favicon.ico">-->
 
-    <title>Cyprus Online Rervation</title>
+    <title>Cyprus Online Rervation - Favourites</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -39,11 +39,6 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
-            <li><a href="signin">SIGN IN</a></li>
-            <li><a href="#">SIGN UP</a></li>
-            <li><a href="#">HELP</a></li>
-=======
               <li class="dropdown">
                   <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
                       Welcome Stelios
@@ -59,7 +54,6 @@
                       <li><a href="/Reservations/upcomingreservations.external:logout">Logout</a></li>
                   </ul>
               </li>
->>>>>>> 8e31eb3d319313f3e407e3b99d209a6094a4a4b3
           </ul>
         </div>
       </div>
@@ -101,72 +95,58 @@
 
     <!-- Begin page content -->
     <div class="container main">
-<<<<<<< HEAD
-        
-=======
-        <div data-container-type="zone" id="upcomingReservationsZone">
-            <div id="upcoming-reservations">
-                <div class="page-header"><h2>Upcoming Reservations</h2></div>
-                <div class="row">
-                    <div class="well-dinner">
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-2">
-                          <img src="http://placehold.it/130x130" />
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-5">
-                          <h4>Artisans Burger Bar</h4>
-                          <p>Burgers | Casual</p>
-                          <p>Stasandrou 20, Nicosia 2060</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-3 col-md-5">
-                          <h4>Reservation Info</h4>
-                          <p>Date: July 11, 2015</p>
-                          <p>Time: 19:00</p>
-                          <p>People: 2</p>
-                          <p>Status: Pending Confirmation</p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div id="past-reservations">
-                <div class="page-header"><h2>Past Reservations</h2></div>
-                <div class="row">
+        <div class="page-header-small"><h3>Restaurant Address Information</h3></div>
+        <form class="">
+            <div class="row">
                 <div class="col-xs-12">
-                  <div style="margin-top: 20px;margin-bottom: 20px;height: 1px;padding-right:40px;background-color: black; text-align:right">
-                    <span style="padding-left: 10px; padding-right:10px;font-size: 18px;background-color: white; position: relative; top: -0.6em;">
-                      <strong>2015</strong> - Total Reservations : 1</span>
-                  </div>
-                </div>
-              </div>
-
-                <div class="row">
-                    <div class="well-dinner">
-                      <div class="row">
-                        <div class="col-xs-12 col-sm-3 col-md-2">
-                          <img src="http://placehold.it/130x130" />
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-5">
-                          <h4>Artisans Burger Bar</h4>
-                          <p>Burgers | Casual</p>
-                          <p>Stasandrou 20, Nicosia 2060</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3">
-                          <h4>Reservation Info</h4>
-                          <p>Date: July 11, 2015</p>
-                          <p>Time: 19:00</p>
-                          <p>People: 2</p>
-                          <p>Status: Completed</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-2 col-md-2">
-                            <a href="" class="btn btn-primary btn-block">Review</a>
-                        </div>
-                      </div>
+                    <div class="alert-dismissable bg bg-success">
+                        <button class="close" type="button" data-dismiss="alert"></button>
+                        <h5>Restaurant Address Information has been updated</h5>
                     </div>
                 </div>
             </div>
-        </div>
->>>>>>> 8e31eb3d319313f3e407e3b99d209a6094a4a4b3
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-4 col-md-4">
+                    <label for="countrySelect">Country</label>
+    				<select class="form-control" id="countrySelect" name="countrySelect"><option selected="selected" value="CY">Cyprus</option></select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4">
+                    <label for="citySelect">City</label>
+    				<select class="form-control" id="citySelect" name="countrySelect"><option selected="selected" value="CY">Cyprus</option></select>
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4">
+                    <label for="municipalitySelect">Municipality</label>
+    				<select class="form-control" id="municipalitySelect" name="countrySelect"><option selected="selected" value="CY">Cyprus</option></select>
+                </div>
+			</div>
+            <div class="row">
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <label for="cuisine">Address Line 1</label>
+                    <input placeholder="Address 1" value="Stasandrou 20" id="textfield" class="form-control form-control" name="textfield" type="text"></input>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <label for="address2">Address Line 2</label>
+                    <input placeholder="Address 2" id="textfield_0" class="form-control form-control" name="textfield_0" type="text"></input>
+                </div>
+                <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                    <label for="address3">Address Line 3</label>
+                    <input placeholder="Address 3" id="textfield_1" class="form-control form-control" name="textfield_1" type="text"></input>
+                </div>
+                <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                    <label for="postalCode">Zip/PO Code</label>
+                    <input placeholder="The Postal code" value="1060" id="textfield_2" class="form-control form-control" name="textfield_2" type="text"></input>
+                </div>
+                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-offset-6 col-lg-4">
+                    <label for="location">Find Location on Google Map</label>
+                    <a class="btn btn-block btn-primary" href="/Reservations/restaurantaddressedit:findgooglemap/1">Find Google Map Location</a>
+                </div>
+            </div>
+            <div class="row pull-right">
+                <button type="submit" class="btn btn-primary btn-reserve">Update Profile</button>
+            </div>
+
+
+        </form>
     </div>
 
     <footer class="footer">

@@ -4541,6 +4541,7 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 16px;
   line-height: 1.333333;
+  margin-right: 7px;
 }
 .btn-lg,
 .btn-group-lg > .btn {

@@ -1,0 +1,195 @@
+
+<!DOCTYPE html><html data-debug-enabled="true" data-locale="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="Apache Tapestry Framework (version 5.4-beta-26)" name="generator"/><meta charset="utf-8"/>
+	    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+	    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<title>Reservations</title>
+
+	    <!-- <meta name="description" content="" />
+	    <meta name="author" content="" />-->
+
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	<meta content="UserEditReservation" name="tapestry-page-name"/><!--[if IE 9]><style type="text/css">.pageloading-mask{opacity:0.25;}</style><![endif]--><!--[if lt IE 9]><style type="text/css">.pageloading-mask{filter:alpha(opacity=25);}</style><![endif]--><link type="text/css" rel="stylesheet" href="/Reservations/assets/ctx/zd9b15ca4/layout/css/bootstrap.css"/><link type="text/css" rel="stylesheet" href="/Reservations/assets/meta/z4c17a586/tapestry5/tapestry.css"/><link type="text/css" rel="stylesheet" href="/Reservations/assets/meta/ze8a5779c/tapestry5/exception-frame.css"/><link type="text/css" rel="stylesheet" href="/Reservations/assets/meta/zceffa0e4/tapestry5/tapestry-console.css"/><link type="text/css" rel="stylesheet" href="/Reservations/assets/meta/za59bbe0/tapestry5/tree.css"/></head>
+	<body data-page-initialized="false"><script type="text/javascript">document.write("<div class=\"pageloading-mask\"><div></div></div>");</script>
+		<nav class="navbar navbar-fixed-top ">
+			<div class="container">
+				<div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/Reservations/usereditreservation.external:home/Reservations?t:ac=10">MyTableGuru</a>
+				</div>
+				<div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+
+
+								<li class="dropdown">
+									<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+										Restaurant <span class="caret"></span>
+									</a>
+									<ul role="menu" class="dropdown-menu">
+										<li><a href="/Reservations/restaurantreservations">Restaurant Reservations</a></li>
+										<li><a href="/Reservations/">Restaurant Reviews <span class="badge">12</span></a></li>
+										<li class="divider">Restaurant Information</li>
+										<li><a href="/Reservations/restaurantgeneraledit">Restaurant General Information</a></li>
+										<li><a href="/Reservations/restauranttables">Restaurant Tables</a></li>
+										<li><a href="/Reservations/restaurantaddressedit">Restaurant Address Information</a></li>
+										<li><a href="/Reservations/restaurantpicturesedit">Restaurant Pictures Information</a></li>
+										<li><a href="/Reservations/restaurantworkinghoursedit">Restaurant Working Hours</a></li>
+										<li><a href="/Reservations/restaurantmenus">Restaurant Menu</a></li>
+									</ul>
+								</li>
+
+
+								<li class="dropdown">
+									<a role="button" href="/Reservations/usereditreservation/10">Artisans Burgerbar @ 23 July 19:00</a>
+								</li>
+
+							<li class="dropdown">
+								<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+									Welcome Stelios
+									<span class="caret"></span>
+								</a>
+								<ul role="menu" class="dropdown-menu">
+									<li><a href="/Reservations/upcomingreservations">Reservations</a></li>
+									<li class="divider"></li>
+									<li><a href="/Reservations/myprofile">My Profile</a></li>
+									<li><a href="/Reservations/favourites">Favourites</a></li>
+									<li><a href="/Reservations/reviews">Reviews </a></li>
+									<li class="divider"></li>
+									<li><a href="/Reservations/usereditreservation.external:logout?t:ac=10">Logout</a></li>
+								</ul>
+							</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+
+	<div style="background-image:url('/Reservations/assets/ctx/c6e3e8a8/images/restaurant/1/1_main.jpg');" class="jumbotron full-image-bg">
+		<div class="container logo-position">
+			<div class="row">
+				<div class="col-md-2">
+					<img src="/Reservations/assets/ctx/315a741b/images/restaurant/1/1_icon.jpg" class="img-thumbnail"/>
+				</div>
+				<div class="col-md-10 logo-name">
+					<div class="push-down"></div>
+					<div class="row">
+						<div class="col-sm-10">
+							<h2 class="white">Artisans Burgerbar Reservation</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div data-container-type="zone" id="updateReservationZone">
+					<form class="form-horizontal col-sm-12" type="form" data-async-trigger="true" data-validate="submit" action="/Reservations/usereditreservation.updatereservationform" method="post" id="updateReservationForm"><input value="10" name="t:ac" type="hidden"></input><input value="1acHezPpTZEW6GTOyLi73mseqNA=:H4sIAAAAAAAAAJVTvUoDQRAeA4FAbPwrFEVBg0HhEsE02hiighBEjKnD5m6MK3e36+5eEhsrX8LGJxArfYIUdr6DD2BjYWXhbk6Sk5wm6XZmvvm+b4bZh3dItjYhW5UoDhyqTlE/mkRR5u+gjkU/Fg5RCFJAgYmGRTixL9BShKNU4rpg2UygS+tWnUi0inWdJLY6pOg6axVUAc9UO+m3uZevBEyUIW0zXwnmHhMPFUyXL0mT5FziN3IVJajf2G1zBbP425DY1wbGNVsc1+yJYDZKWQnqHpVSU3Uene3zz/vXBECbjyqvqKflr+AGIGaQM10di8kQJVursBLXwZFxF4nHAl/1NCfDbLGbHakz1NiA9ThkxJHNPA99JXtSM5Fi6ac4Dk8ovAQLcQ0SXbT7Y6XCuJYfgg85l2Hxb0wtP8C6NbQj5M1CJg4VcHN1kRHNAe79e4B6CZz5Zg1W9+LU4P3dVT7mn59uSwlIlCFlu1SjjxxjxHwkbcxs0Xykbsp8nKnQSMRaXO4bjQDDfvsDAAA=" name="t:formdata" type="hidden"></input>
+
+
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="row">
+									<div class="col-sm-12">
+										<label for="editReservationrDate">Date</label>
+										<!--<input t:type="datefield" t:id="reservationDate" value="reservation.reservationDate" disabled="" /> -->
+										<input value="23 July, 2015" id="editReservationrDate" class="form-control form-control false" name="editReservationrDate" type="text"></input>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<label for="editReservationrTime">Time</label>
+										<input placeholder="Reservation time" value="19:00" id="editReservationrTime" class="form-control form-control" name="editReservationrTime" type="text"></input>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12">
+										<label for="peopleAmount">People Amount</label>
+										<input placeholder="The people attending" data-translation-message="You must provide an integer value for People Amount." data-translation="integer" data-validation="true" value="2" id="peopleAmount" class="form-control form-control" name="peopleAmount" type="number"></input>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div class="row">
+									<div class="col-sm-12">
+										<label for="reservationComments">Comment</label>
+										<textarea placeholder="Special Request (optional)" rows="4" id="reservationComments" class="form-control" name="reservationComments"></textarea>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-6">
+										<label for="smokingPreference">Smoking Preference</label>
+										<select class="form-control form-control" id="select_0" name="select_0"><option value="144">Smoking</option><option value="145">Non Smoking</option></select>
+									</div>
+
+									<div class="col-sm-6">
+										<label for="sittingLocation">Sitting Location</label>
+										<select class="form-control form-control" id="select_1" name="select_1"><option value="146">Outside</option><option value="147">Inside</option></select>
+									</div>
+								</div>
+
+								<br/>
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="row">
+											
+												<div class="col-sm-offset-6 col-sm-3">
+													<a data-async-trigger="true" class="btn btn-danger pull-right" href="/Reservations/usereditreservation:confirmcancelreservation?t:ac=10">Cancel Reservation</a>
+												</div>
+												<div class="col-sm-3">
+													<input value="Update Reservation" id="updateReservation" class="btn btn-primary pull-right" data-submit-mode="normal" name="updateReservation" type="submit"></input>
+												</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+		<footer class="footer">
+			<section class="container">
+				<div class="row text-center">
+					<div class="col-xs-4">
+						<p><strong>Cities</strong></p>
+				        <p><a href="/Reservations/restaurants/Nicosia">Nicosia</a></p>
+				        <p><a href="/Reservations/restaurants/Limassol">Limassol</a></p>
+				        <p><a href="/Reservations/restaurants/Larnaca">Larnaca</a></p>
+				        <p><a href="/Reservations/restaurants/Paphos">Paphos</a></p>
+				        <p><a href="/Reservations/restaurants/Famagusta">Famagusta</a></p>
+					</div>
+					<div class="col-xs-4">
+						<a href="/Reservations/usereditreservation.external:help?t:ac=10">Help</a><br/>
+						<a href="/Reservations/usereditreservation.external:terms?t:ac=10">Terms of Use</a>
+					</div>
+					<div class="col-xs-4">
+						<p><a href="/Reservations/usereditreservation.external.setlocaltoenglish?t:ac=10">English</a> | <a href="/Reservations/usereditreservation.external.setlocaltogreek?t:ac=10">Greek</a> | <a href="/Reservations/usereditreservation.external.setlocaltorussian?t:ac=10">Russian</a></p>
+						<p>©2014. version 0.40.0. All Rights Reserved.</p>
+					</div>
+				</div>
+			</section>
+		</footer>
+	</body>
+</html>

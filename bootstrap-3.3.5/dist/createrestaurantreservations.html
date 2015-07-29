@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Cyprus Online Rervation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav class="navbar navbar-fixed-top opaque">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Reservation</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                  <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      Welcome Stelios
+                      <span class="caret"></span>
+                  </a>
+                  <ul role="menu" class="dropdown-menu">
+                      <li><a href="/Reservations/upcomingreservations">Reservations</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/Reservations/myprofile">My Profile</a></li>
+                      <li><a href="/Reservations/favourites">Favourites</a></li>
+                      <li><a href="/Reservations/reviews">Reviews </a></li>
+                      <li class="divider"></li>
+                      <li><a href="/Reservations/upcomingreservations.external:logout">Logout</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container main">
+        <div class="row" style="padding-bottom:20px;">
+            <div class="form-group col-xs-12">
+                <!-- http://jondmiles.com/bootstrap-datepaginator/#usage-->
+                <div class="datepaginator" id="paginator"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 col-md-3 pull-right">
+                <a class="btn btn-block btn-success" data-toggle="modal" data-target="#myModal">Add New Reservation</a>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog  modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Create New Reservation</h4>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body">
+              	   <div class="row">
+                	    <div class="col-xs-3">
+                        <div class="form-group">
+                          <label for="reservationDate">Date</label>
+                          <input type="textField" id="reservationDate" class="hidden form-control create-reservation-date-select"/>
+                        </div>
+                      </div>
+                      <div class="col-xs-3">
+                        <div class="row">
+                            <div class="col-xs-12">
+                              <div class="form-group">
+                                <label for="reservationTime" class="control-label">Time</label>
+                                <input type="textField" id="reservationTime" class="hidden form-control create-reservation-time-select" placeholder="Reservation time" />
+                              </div>
+                            </div>
+                            <div class="col-xs-12">
+                              <div class="form-group">
+                                <label for="reservationDuration" class="control-label">Reservation Duration</label>
+                                <input type="textField" id="reservationDuration" class="hidden form-control create-reservation-duration-select" placeholder="Reservation duration" />
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="form-group">
+                              <label for="peopleAmount" class="control-label">Party Size</label>
+                              <textfield type="number" class="form-control" id="reservationPeopleAmount" placeholder="The people attending" min="1" max="25"/>
+                            </div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="form-group">
+                              <label for="phoneNumber">Phone</label>
+                              <textfield type="number" id="phoneNumber" class="form-control" value="phoneNumberValue"  />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="form-group">
+                              <label for="firstName">First Name</label>
+                              <t:textfield type="textField" class="form-control" t:id="firstname" t:value="firstnamevalue" />
+                            </div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="form-group">
+                              <label for="lastname">Last Name</label>
+                              <t:textfield type="textField" class="form-control" t:id="lastname" t:value="lastnamevalue"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="row">
+                      <t:zone t:id="tableFoundZone" id="tableFoundZone">
+                      <div class="col-xs-12">
+                        <t:if test="allTableValuesEntered">
+                          <t:if test="restaurantTable">
+                            <div class='bg bg-success' role='alert'>Table is available [Shape :${restaurantTable.tableShapeRecord.name} Number: ${restaurantTable.tableNumber} min: ${restaurantTable.minimumPeople} - max: ${restaurantTable.maximumPeople}]</div>
+                          <p:else>
+                            <div class='bg bg-danger' role='alert'>Restaurant has no table available for the given people</div>
+                          </p:else>
+                          </t:if>
+                        </t:if>
+                      </div>
+                      </t:zone>
+                    </div>
+                    <div class="row hidden">
+
+                      <t:if test="phoneNumberValue">
+                        <t:if test="peopleExists">
+                          <t:outputraw value="${previousReservations}"/>
+                        </t:if>
+                      </t:if>
+                      </t:zone>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="footer">
+      <section class="container">
+        <div class="row text-center">
+          <div class="col-xs-4">
+            <p><strong>Cities</strong></p>
+            <p><a href="#">Nicosia</a></p>
+            <p><a href="#">Limmasol</a></p>
+            <p><a href="#">Larnaca</a></p>
+            <p><a href="#">Paphos</a></p>
+            <p><a href="#">Famagusta</a></p>
+          </div>
+          <div class="col-xs-4">
+            <p><a href="/reservations/index.external:help">Help</a></p>
+            <p><a href="/reservations/index.external:terms">Terms of Use</a></p>
+            <!--<p>BACK TO <a href="#top">TOP</a></p>-->
+          </div>
+          <div class="col-xs-4 pull-right">
+            <p><a href="/reservations/index.external.setlocaltoenglish">English</a> |
+              <a href="/reservations/index.external.setlocaltogreek">Greek</a> |
+              <a href="/reservations/index.external.setlocaltorussian">Russian</a></p>
+            <p>©2014. version 0.28.01. All Rights Reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript"src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/datetimepicker.js"></script>
+
+    <script type="text/javascript">
+    	/*
+    See more options at:
+    http://jondmiles.com/bootstrap-datepaginator/#usage
+    */
+
+
+    $(document).ready(function() {
+
+    // This will wait for the DOM (your HTML) to be loaded before executing aFunction
+
+    /* uncomment to use optios
+      var options = {
+      selectedDate: '2013-01-01',
+      selectedDateFormat: 'YYYY-MM-DD'
+    }
+
+    $('#paginator').datepaginator(options);
+
+    */
+
+    //  defatult settings, i.e. today's date etc.
+    var options = {
+      format : 'MMMM DD, YYYY',
+      // minDate : 'now',
+      viewMode : 'days',
+      showTodayButton : true,
+      inline: true
+    }
+      $('.create-reservation-date-select').datetimepicker(options);
+
+      		$('.create-reservation-time-select').datetimepicker({
+      			format : 'HH:mm',
+      			inline: true,
+      			defaultDate: moment("19:00","HH:mm"),
+      			// enabledHours: [1,2,3,4,5,6],
+      		});
+
+      		$('.create-reservation-duration-select').datetimepicker({
+      			format : 'HH:mm',
+      			inline: true,
+      			enabledHours: [1,2,3,4,5,6],
+      //			defaultDate: moment("2:00","HH:mm") // This need to come from the selected table
+      		});
+
+      /* uncomment to add event if date is changed
+      $('#paginator').on('selectedDateChanged', function(event, date) {
+      // Your logic goes here
+      alert('Date was changed.');
+      });
+      */
+
+    });
+    	</script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    -->
+  </body>
+</html>

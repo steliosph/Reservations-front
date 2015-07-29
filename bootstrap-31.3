@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Cyprus Online Rervation - User Edit Reservation</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+	<body>
+    <nav class="navbar navbar-fixed-top ">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed"
+            data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Reservation</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                  <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      Welcome Stelios
+                      <span class="caret"></span>
+                  </a>
+                  <ul role="menu" class="dropdown-menu">
+                      <li><a href="/Reservations/upcomingreservations">Reservations</a></li>
+                      <li class="divider"></li>
+                      <li><a href="/Reservations/myprofile">My Profile</a></li>
+                      <li><a href="/Reservations/favourites">Favourites</a></li>
+                      <li><a href="/Reservations/reviews">Reviews </a></li>
+                      <li class="divider"></li>
+                      <li><a href="/Reservations/upcomingreservations.external:logout">Logout</a></li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+		<div style="background-image:url('../images/artisans.jpg');" class="restaurant-picture-top bg">
+			<div class="container header">
+				<div class="row">
+					<div class="col-xs-12" id="restaurant-logo-position">
+						<img src="../images/artisans_icon.jpg" class=" img-thumbnail"/>
+					</div>
+					<div class="col-xs-12" id="restaurant-logo-name">
+						<h2>Artisans Burgerbar Reservation</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div data-container-type="zone" id="updateReservationZone">
+						<form class="" >
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="row">
+							  		<div class="form-group col-xs-12 col-sm-12">
+											<label for="editReservationrDate">Date</label>
+											<input value="23 July, 2015" id="editReservationrDate" class="form-control form-control false" name="editReservationrDate" type="text"></input>
+										</div>
+										<div class="form-group col-xs-12 col-sm-12">
+											<label for="editReservationrTime">Time</label>
+											<input placeholder="Reservation time" value="19:00" id="editReservationrTime" class="form-control" name="editReservationrTime" type="text"></input>
+										</div>
+									</div>
+								</div>
+								<div class="form-group col-xs-12 col-sm-8">
+									<label for="reservationComments">Comment</label>
+									<textarea placeholder="Special Request (optional)" rows="5" id="reservationComments" class="form-control" name="reservationComments"></textarea>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="peopleAmount">People Amount</label>
+									<input placeholder="The people attending" data-translation-message="You must provide an integer value for People Amount." data-translation="integer" data-validation="true" value="2" id="peopleAmount" class="form-control form-control" name="peopleAmount" type="number"></input>
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="smokingPreference">Smoking Preference</label>
+									<select class="form-control form-control" id="select_0" name="select_0"><option value="144">Smoking</option><option value="145">Non Smoking</option></select>
+								</div>
+								<div class="form-group col-xs-12 col-sm-4">
+									<label for="sittingLocation">Sitting Location</label>
+									<select class="form-control form-control" id="select_1" name="select_1"><option value="146">Outside</option><option value="147">Inside</option></select>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-xs-12">
+									<input value="Update Reservation" id="updateReservation" class="btn btn-primary btn-reserve" data-submit-mode="normal" name="updateReservation" type="submit"></input>
+									<a data-async-trigger="true" class="btn btn-danger btn-reserve" href="/Reservations/usereditreservation:confirmcancelreservation?t:ac=10">Cancel Reservation</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<section class="container">
+				<div class="row text-center">
+					<div class="col-xs-4">
+						<p><strong>Cities</strong></p>
+				        <p><a href="/Reservations/restaurants/Nicosia">Nicosia</a></p>
+				        <p><a href="/Reservations/restaurants/Limassol">Limassol</a></p>
+				        <p><a href="/Reservations/restaurants/Larnaca">Larnaca</a></p>
+				        <p><a href="/Reservations/restaurants/Paphos">Paphos</a></p>
+				        <p><a href="/Reservations/restaurants/Famagusta">Famagusta</a></p>
+					</div>
+					<div class="col-xs-4">
+						<a href="/Reservations/usereditreservation.external:help?t:ac=10">Help</a><br/>
+						<a href="/Reservations/usereditreservation.external:terms?t:ac=10">Terms of Use</a>
+					</div>
+					<div class="col-xs-4">
+						<p><a href="/Reservations/usereditreservation.external.setlocaltoenglish?t:ac=10">English</a> | <a href="/Reservations/usereditreservation.external.setlocaltogreek?t:ac=10">Greek</a> | <a href="/Reservations/usereditreservation.external.setlocaltorussian?t:ac=10">Russian</a></p>
+						<p>©2014. version 0.40.0. All Rights Reserved.</p>
+					</div>
+				</div>
+			</section>
+		</footer>
+	</body>
+</html>

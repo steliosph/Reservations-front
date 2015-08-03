@@ -10130,7 +10130,6 @@ button.close {
   color: black;
 }
 .restaurant-picture-top {
-  background-attachment: fixed;
   min-width: 100%;
   margin-top: -41px;
   height: 350px;
